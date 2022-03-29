@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+<div class="container mt-5 w-50">
+
+    <h2 class="mb-4">Search Product</h2>
+  
+    <form action="/search/:id" method="post">
+        <br>
+        <input type="text" name="productcode" class="form-control" id="productcode"  placeholder="Product Code">
+        <br>
+        <button type="submit" class="btn btn-info btn-block mt-3">Search in Database</button>
+    </form>
+  </div>
+  <%- include('partials/footer') -%>
