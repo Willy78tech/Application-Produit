@@ -7,10 +7,10 @@ const expressSession = require("express-session");
 const cookieParser = require("cookie-parser");
 const connectFlash = require("connect-flash");
 
-//const User = require('./model/user');
+
 const methodOverride = require('method-override');
 const path = require('path');
-const userRoutes = require('./routes/users');
+const productRoutes = require('./routes/products');
 dotenv.config({path: './config.env'});
 
 mongoose.connect(process.env.DATABASE_LOCAL, {useNewUrlParser: true});
@@ -39,7 +39,7 @@ res.locals.flashMessages = req.flash();
 next();
 });
 
-app.use(userRoutes);
+app.use(productRoutes);
 
 const port = process.env.PORT;
 app.listen(port, ()=> {

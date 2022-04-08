@@ -1,24 +1,17 @@
 <%- include('partials/header') -%>
 
-<div class="col-sm-6">
+<div class="container mt-5 w-50">
     <h1>Add New Product</h1>
-    <form action="/new" method="post"> <div>
-      <label for="code" class="th"><b>Code</b></label>
+    <form action="/new" method="post"> 
       <input type="text" name="code" value="" class="form-control" placeholder="code" required>
-      </div>
       <br>
-      <label for="description" class="th"><b>Description</b></label>
       <input type="text" name="description" class="form-control" id="description"  placeholder="Description">
       <br>
-      <br>
-      <label for="price" class="th"><b>Price</b></label>
       <input type="number" name="price" class="form-control" id="price"  placeholder="Price">
       <br>    
     <input class="btn btn-info form-control" type="submit" value="Add to Database">
-      </div>
     </form>
-    <br>
-    </div>
-</div>
+  </div>
+ 
 
 <%- include('partials/footer') -%>
